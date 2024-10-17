@@ -16,5 +16,7 @@ export const initialValue: GenericContextValue = {
     setCurrentPage:() => {},
     error: null, 
     setError:() => {},
+    filteredData:[], 
+    setFilteredData:() => {},
 }
     

@@ -38,4 +38,6 @@ export interface Movie {
     removeFromWishlist: (id: number) => void;
     error: string | null;
     setError: (error: string | null) => void;
+    filteredData: Movie[];
+    setFilteredData: React.Dispatch<React.SetStateAction<Movie[]>>;
     }

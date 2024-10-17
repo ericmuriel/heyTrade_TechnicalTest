@@ -1,4 +1,3 @@
-// App.tsx
 import React, { useContext, useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -13,6 +12,7 @@ import Wishlist from './components/WishList/WishList';
 import { ThemeProvider } from './constants/ThemeContext';
 import GenericContextProvider, { GenericContext } from './context/GenericContext';
 import { fetchMovies } from './services/fetchService';
+import MovieTheme from './components/MovieThemes/MovieThemes';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -80,6 +80,9 @@ const Main: React.FC = () => {
               if (route.name === "WishlistTab") {
                 iconName = 'heart';
               }
+              if (route.name === "Categories") {
+                iconName = 'menu';
+              }
               return <Ionicons name={iconName} size={size} color={color} />;
             },
             tabBarActiveTintColor: 'tomato',
@@ -92,6 +95,11 @@ const Main: React.FC = () => {
             options={{ headerShown: false }} 
           />
           <Tab.Screen 
+            name="Categories" 
+            component={MovieTheme} 
+            options={{ title: 'Categorías' }} 
+          />
+           <Tab.Screen 
             name="WishlistTab" 
             component={Wishlist} 
             options={{ title: 'Favoritos' }} 

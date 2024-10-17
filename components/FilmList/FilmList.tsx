@@ -1,37 +1,41 @@
 import React, { useContext, useState } from 'react';
-import { FlatList, TouchableOpacity, Text, View } from 'react-native';
-import { FilmCard, FilmImage, FilmTitle } from './FilmListStyled';
+import { FlatList, Text, TextInput, View } from 'react-native';
 import { GenericContext } from '@/context/GenericContext';
 import Pagination from '../Pagination/Pagination';
+import { FilmItemRenderer } from '@/utils/RenderFilmItem/RenderFilmItem';
 
 const FilmList: React.FC<any> = ({ navigation }) => {
   const { data, totalPages, setCurrentPage, loading, error } = useContext(GenericContext);
-  
+  const [searchQuery, setSearchQuery] = useState('');
+
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
 
   const renderFilmItem = ({ item }: { item: any }) => (
-    <TouchableOpacity
-      onPress={() => navigation.navigate('Details', { film: item })}
-      testID={`film-item-${item.id}`}
-    >
-      <FilmCard>
-        <FilmImage source={{ uri: `https://image.tmdb.org/t/p/w500${item.poster_path}` }} />
-        <FilmTitle>
-          <Text>{item.title}</Text>
-        </FilmTitle>
-      </FilmCard>
-    </TouchableOpacity>
+    <FilmItemRenderer item={item} navigation={navigation} />
   );
-
+  
   return (
     <View style={{ flex: 1 }}>
+        <TextInput
+        placeholder="Buscar películas..."
+        value={searchQuery}
+        onChangeText={setSearchQuery}
+        style={{
+          height: 40,
+          borderColor: 'gray',
+          borderWidth: 1,
+          paddingHorizontal: 10,
+          borderRadius: 5,
+          marginBottom: 10,
+        }}
+      />
       {loading ? (
         <Text>Cargando...</Text>
       ) : error ? (
         <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
-          <Text style={{ color: 'red' }}>{error}</Text> {/* Mostrar mensaje de error */}
+          <Text style={{ color: 'red' }}>{error}</Text>
         </View>
       ) : (
         <>

@@ -12,7 +12,9 @@ export default function GenericContextProvider({ children }: any) {
     const [totalPages, setTotalPages] = useState<number>(0);
     const [currentPage, setCurrentPage] = useState<number>(1);
     const [error, setError] = useState<string | null>(null);
+    const [filteredData, setFilteredData] = useState<Movie[]>([]);
 
+    
     const addToWishlist = (film: Movie) => {
         setWishlist((prevWishlist) => {
             if (!prevWishlist.some(item => item.id === film.id)) {
@@ -41,7 +43,9 @@ export default function GenericContextProvider({ children }: any) {
         currentPage, 
         setCurrentPage,
         error,
-        setError
+        setError,
+        filteredData, 
+        setFilteredData
     }
 
     return (

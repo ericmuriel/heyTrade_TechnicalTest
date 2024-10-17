@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, Button, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { GenericContext } from '../../context/GenericContext';
 import {
   Header,
@@ -43,7 +43,7 @@ const FilmDetail = ({ route }: any) => {
 
             {film.overview.length > 100 && (
               <TouchableOpacity onPress={() => setModalVisible(true)}>
-                <ReadMore>Read more</ReadMore>
+                <ReadMore>Leer Más</ReadMore>
               </TouchableOpacity>
             )}
             <ButtonContainer>

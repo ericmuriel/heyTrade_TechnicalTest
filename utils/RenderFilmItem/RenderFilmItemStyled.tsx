@@ -8,13 +8,15 @@ export const SectionContainer = styled.View`
 `;
 
 export const FilmCard = styled.View`
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 6px;
   width: ${width * 0.45}px;
 `;
 
 export const FilmImage = styled.Image`
   width: 100%;
-  height: 250px;
+  height: 350px;
   border-radius: 10px;
 `;
 
