@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Ionicons } from '@expo/vector-icons';
-import { GenericContext } from '@/context/GenericContext';
+import { GenericContext } from '../../context/GenericContext';
 import {   
   CloseButton,
   Container,

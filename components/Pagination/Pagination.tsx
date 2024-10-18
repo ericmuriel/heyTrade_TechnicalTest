@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { PageButton, PageButtonText, PaginationContainer } from './PaginationStyled';
-import { GenericContext } from '@/context/GenericContext';
+import { GenericContext } from '../../context/GenericContext';
 
 interface PaginationProps {
   currentPage: number;

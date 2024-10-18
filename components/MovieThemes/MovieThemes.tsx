@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { FlatList, ScrollView, Text } from 'react-native';
 import { SectionContainer } from './MovieThemeStyled';
-import { GenericContext } from '@/context/GenericContext';
+import { GenericContext } from '../../context/GenericContext';
 import { useTheme } from '../../constants/ThemeContext';
 import { FilmItemRenderer } from '@/utils/RenderFilmItem/RenderFilmItem';
 
@@ -10,8 +10,8 @@ const MovieTheme: React.FC<any> = ({ navigation }) => {
   const theme = useTheme();
 
   const genreIds: Record<string, number[]> = {
-    Crime: [80],
-    Comedy: [35],
+    Crimen: [80],
+    Comedia: [35],
     Drama: [18],
   };
 
@@ -21,6 +21,7 @@ const MovieTheme: React.FC<any> = ({ navigation }) => {
       return genreIds[genre].some((id: number) => item.genre_ids.includes(id));
     }),
   }));
+
 
   const renderFilmItem = ({ item }: { item: any }) => (
     <FilmItemRenderer item={item} navigation={navigation} />

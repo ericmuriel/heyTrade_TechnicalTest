@@ -52,7 +52,7 @@ interface FilmDetailModalProps {
             <ButtonContainer>
               <Button
                 testID="close-button"
-                title="Close"
+                title="Cerrar"
                 color={buttonBackgroundColor}
                 onPress={onClose}
               />

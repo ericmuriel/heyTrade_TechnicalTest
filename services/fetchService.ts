@@ -19,7 +19,7 @@ export const fetchMovies = async (page: number): Promise<{ movies: Movie[]; tota
     }
     const data: MovieResponse = await response.json();
 
-    const maxPages = 500; // Definido un máximo de páginas
+    const maxPages = 500;
     const totalPages = Math.min(data.total_pages, maxPages);
 
     return {

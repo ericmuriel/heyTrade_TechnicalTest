@@ -48,7 +48,7 @@ const FilmDetail = ({ route }: any) => {
             )}
             <ButtonContainer>
               <Button
-                title={isFilmInWishlist ? "In Wishlist" : "Add to Wishlist"}
+                title={isFilmInWishlist ? "En Favoritos" : "Añadir a favoritos"}
                 color={theme.styles.button.backgroundColor}
                 onPress={() => {
                   if (!isFilmInWishlist) {
