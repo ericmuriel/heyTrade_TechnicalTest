@@ -23,7 +23,7 @@ Instalación
 Sigue los siguientes pasos para instalar el proyecto en tu máquina local:
 
 Clona este repositorio:
-git clone https://github.com/tu-usuario/movie-app.git
+git clone https://github.com/ericmuriel/heyTrade_TechnicalTest
 
 Instala las dependencias del proyecto usando npm o yarn:
 npm install
