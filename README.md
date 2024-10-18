@@ -18,8 +18,6 @@ Puedes descargar Node.js y npm desde su sitio oficial. npm viene preinstalado co
 
 Para instalar Expo CLI globalmente, ejecuta el siguiente comando:
 
-bash
-Copiar código
 npm install -g expo-cli
 Instalación
 Sigue los siguientes pasos para instalar el proyecto en tu máquina local:
