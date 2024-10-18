@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "heyTrade_Test",
-    "slug": "heyTrade_Test",
+    "name": "heytradetechincalttest",
+    "slug": "heytradetechincalttest",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -20,7 +20,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ericmuriel.heytradetechincalttest"
     },
     "web": {
       "bundler": "metro",
@@ -38,7 +39,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "79dd4dac-1777-4c4d-8f18-0523e8226be0"
+        "projectId": "1b9e0e7e-6d61-46c7-bc8f-d5d1afc3354e"
       }
     }
   }
