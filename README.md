@@ -1,5 +1,5 @@
 
-Movie App
+Movie App APPETIZE PARA PROBARLA: https://appetize.io/app/android/com.ericmuriel.heytradetechincalttest?device=pixel7&osVersion=13.0
 
 Es una aplicación de React Native que permite a los usuarios buscar, ver detalles y gestionar una lista de deseos de películas. La aplicación también cuenta con funciones de paginación y filtrado de películas a través de una API externa.
 
