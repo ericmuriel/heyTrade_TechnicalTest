@@ -29,7 +29,7 @@ git clone https://github.com/tu-usuario/movie-app.git
 
 Instala las dependencias del proyecto usando npm o yarn:
 npm install
-# o
+o
 yarn install
 
 Configuración
@@ -43,7 +43,7 @@ Ejecución
 Para iniciar el proyecto usando Expo (opción recomendada si prefieres no lidiar con configuraciones nativas):
 
 npm start
-# o
+o
 yarn start
 Esto abrirá una ventana de Expo en tu navegador. Escanea el código QR con la aplicación Expo Go en tu dispositivo móvil (disponible en la App Store o Google Play) para ver la app en tu teléfono.
 
@@ -53,12 +53,12 @@ Si prefieres ejecutar el proyecto en un emulador o dispositivo físico (iOS o An
 Para iOS (solo en macOS):
 
 npm run ios
-# o
+o
 yarn ios
 
 Para Android:
 npm run android
-# o
+o
 yarn android
 
 
@@ -77,7 +77,7 @@ Testing
 
 Para correr las pruebas unitarias del proyecto:
 npm run test
-# o
+o
 yarn test
 
 Las pruebas que hay disponibles se encuentran ubicadas junto a sus respectivos componentes en archivos con la extensión .test.tsx. Esto facilita la localización y ejecución de pruebas específicas.
